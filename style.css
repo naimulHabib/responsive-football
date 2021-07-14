@@ -49,6 +49,7 @@ header{
     padding: 10px 24px;
     margin: 0 50px;
     margin-top: 52px;
+    /* position: absolute; */
     
 }
 .login a{
@@ -58,6 +59,28 @@ header{
 .login:hover{
     background-color: rgb(109, 19, 151);
     
+}
+.fa-bars{
+    display: none;
+}
+@media (min-width:700px) {
+    
+}
+@media (max-width:700px) {
+   .navigation ul{
+        display: none;
+    }
+    .login{
+        position: absolute;
+        right: 0px;
+    }
+    .fa-bars{
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 60px;
+        font-size: 28px;
+    }
 }
 
 /* -----------nav end */
@@ -71,6 +94,14 @@ header{
 .right-content img{
     width: 556px;
     height: 438px;
+    transition: 3s;
+    transform: scale(1.1);
+}
+.right-content img:hover{
+    
+    transform: translate(-25%, 15%) rotate(-25deg) translate(25%, -15%);
+    /* transform: rotate(360deg); */
+    /* transform: scaleX(1); */
 }
 .left-content{
     margin-left: 156px;
@@ -88,6 +119,11 @@ header{
     padding: 10px 24px;
     
     text-decoration: none;
+    transition: 4s;
+}
+.btn-watch-live:hover{
+    padding: 10px;
+   transform: scale(30px,20px);
 }
 
 
@@ -136,6 +172,40 @@ margin-left: 12px;
 .player-description p{
     font-size: 16px;
 }
+/* ///////////////////////////////blog///////////////////////// */
+.blog-section{
+    width: 90vw;
+    margin: 0 auto;
+}
+.blog-section h2{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 20px;
+    
+}
+.blog{
+    margin-left: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px 10px #e2e2e2;
+    transition: 1s;
+}
+.blog:hover{
+    padding: 20px;
+    transform: scale(20px);
+}
+.blog-description h2{
+    color: blue;
+}
+.blog img{
+    margin-left: 60px;
+}
 
 /* <!-- ///////////////Highlights start//////////// --> */
 .highlights{
@@ -175,6 +245,55 @@ margin-left: 12px;
 }
 /* -----------main end----------- */
 /* -----------main end----------- */
+        
+.animation-title{
+    font-size: 3rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: rgb(160, 154, 154);
+    margin-top: 60px;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+.animation-paragraph{
+    margin-top: 450px;
+    width: 90vw;
+    text-align: center;
+    position: absolute;
+    left: 50px;
+}
+.set{
+    width: auto;
+    height: auto;
+}
+.show{
+    width: 50%;
+    height: 400px;
+    background-image: url(img/albayt_top.jpg);
+    animation: slider 7s infinite linear;
+    border-radius: 10px;
+    position: static;
+    position: absolute;
+    left: 25%;
+    margin-bottom: 100px;
+}
+@keyframes slider {
+    0%{
+        background-image: url(img/alrayyan_top.jpg);
+    }
+    20%{
+        background-image: url(img/alwakrah_top.jpg);
+    }
+    50%{
+        background-image: url(img/khalifanew_top.jpg);
+    }
+    75%{
+        background-image: url(img/lusail2022.jpg);
+    }
+}/* -----------------------bonus section-------- */
+
+
 
 /* ---------------footer start---------- */
 /* ---------------footer start---------- */
@@ -202,9 +321,6 @@ footer img{
 @media (max-width:700px) {
     
 
-        .nav{
-            display: none;
-        }
     
     /* //////////////////////////////////////// */
     .header-heading{
