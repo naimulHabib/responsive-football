@@ -329,6 +329,7 @@ footer img{
     }
     .right-content img{
         width: 100%;
+        height: 100%;
     }
     .content{
         display: flex;
@@ -380,6 +381,20 @@ footer img{
        
         width: 387px;
         height: 227px;
+        
+    }
+    .blogs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 40px;
+        
+    }
+    .blog img{
+        margin-right: 40px ;
+    }
+    .animation-paragraph{
+        width: auto;
         
     }
    
